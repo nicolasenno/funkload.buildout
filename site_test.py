@@ -7,6 +7,11 @@ import unittest
 from random import random
 from funkload.FunkLoadTestCase import FunkLoadTestCase
 
+PAGES = (('Homepage', ''),
+         ('path1', 'contacts'),
+         ('path2', 'media'),
+         )
+
 class Site(FunkLoadTestCase):
     """This test use a configuration file Site.conf."""
 
@@ -15,13 +20,13 @@ class Site(FunkLoadTestCase):
         self.server_url = self.conf_get('main', 'url')
 
     def test_app(self):
-        # The description should be set in the configuration file
+        ''' site path
+        '''
         server_url = self.server_url
-        # begin of test ---------------------------------------------
-        nb_time = self.conf_getInt('test_simple', 'nb_time')
-        for i in range(nb_time):
-            self.get(server_url, description='Get url')
-        # end of test -----------------------------------------------
+
+        for title, page in PAGES:
+            url = "/".join((server_url, page))
+            self.get(url, description='Get %s' % title)
 
 
 if __name__ in ('main', '__main__'):
