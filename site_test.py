@@ -4,7 +4,6 @@
 $Id$
 """
 import unittest
-from random import random
 from funkload.FunkLoadTestCase import FunkLoadTestCase
 
 PAGES = (('Homepage', ''),
