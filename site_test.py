@@ -4,7 +4,6 @@
 $Id$
 """
 import unittest
-from random import random
 from funkload.FunkLoadTestCase import FunkLoadTestCase
 
 PAGES = (('Homepage', ''),
@@ -12,8 +11,9 @@ PAGES = (('Homepage', ''),
          ('path2', 'media'),
          )
 
+
 class Site(FunkLoadTestCase):
-    """This test use a configuration file Site.conf."""
+    """This test uses a configuration file Site.conf."""
 
     def setUp(self):
         """Setting up test."""
