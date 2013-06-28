@@ -11,6 +11,7 @@ PAGES = (('Homepage', ''),
          ('path2', 'media'),
          )
 
+
 class Site(FunkLoadTestCase):
     """This test use a configuration file Site.conf."""
 
