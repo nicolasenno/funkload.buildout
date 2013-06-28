@@ -13,7 +13,7 @@ PAGES = (('Homepage', ''),
 
 
 class Site(FunkLoadTestCase):
-    """This test use a configuration file Site.conf."""
+    """This test uses a configuration file Site.conf."""
 
     def setUp(self):
         """Setting up test."""
