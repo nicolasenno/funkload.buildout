@@ -28,7 +28,7 @@ test-app:
 
 bench-app:
 	-$(BIN)fl-run-bench --simple-fetch site_test.py Site.test_app -c 1:5:10:15:20:30:40:50 -D 45 -m 0.1 -M .5 -s 1 $(FLOPS)
-	-$(BIN)fl-build-report $(LOG_HOME)/site-bench.xml --html -o $(REPORT)
+	-$(BIN)fl-build-report $(REPORT_HOME)/simple-bench.xml --html -o $(REPORT)
 
 clean:
 	-find . "(" -name "*~" -or  -name ".#*" -or  -name "*.pyc" ")" -print0 | xargs -0 rm -f
