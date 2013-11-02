@@ -7,8 +7,6 @@ import unittest
 from funkload.FunkLoadTestCase import FunkLoadTestCase
 
 PAGES = (('Homepage', ''),
-         ('path1', 'contacts'),
-         ('path2', 'media'),
          )
 
 
